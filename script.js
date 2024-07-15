@@ -70,7 +70,8 @@ console.log(max(digitOne, digitTwo, digitThree));
 const sum = (digitOne, digitTwo) => digitOne + digitTwo;
 const multiply = (digitOne, digitTwo) => digitOne * digitTwo;
 const division = (digitOne, digitTwo) => digitOne / digitTwo;
-const difference = (digitOne, digitTwo) => Math.abs(digitOne - digitTwo);
+const difference = (digitOne, digitTwo) =>
+  digitOne > digitTwo ? (digitOne - digitTwo) : (digitTwo - digitOne);
 
 let userNumberOne = +prompt("Введите первое число:");
 let userNumberTwo = +prompt("Введите второе число:");
