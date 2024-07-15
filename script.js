@@ -24,13 +24,10 @@ console.log(cubeVariantTwo(2) + cubeVariantTwo(3));
 налогов равен значение"
 */
 
-
 function tax(salaryValue) {
   if (!isNaN(salaryValue)) {
     console.log(
-      `Размер заработной платы за вычетом налогов равен ${
-        salaryValue*0.87
-      }`
+      `Размер заработной платы за вычетом налогов равен ${salaryValue * 0.87}`
     );
   } else {
     console.log("Значение задано неверно");
@@ -46,14 +43,14 @@ console.log(tax(salaryUser));
 максимальное значение среди этих чисел
 */
 
-function max(digitOne, digitTwo, digitThree) { 
+function max(digitOne, digitTwo, digitThree) {
   if (digitOne > digitTwo && digitOne > digitThree) {
     console.log(`максимальное значение: ${digitOne}`);
   } else if (digitTwo > digitOne && digitTwo > digitThree) {
     console.log(`максимальное значение: ${digitTwo}`);
-  } else{
+  } else {
     console.log(`максимальное значение: ${digitThree}`);
-}
+  }
 }
 let digitOne = +prompt("Введите первое число:");
 let digitTwo = +prompt("Введите второе число:");
@@ -70,15 +67,20 @@ console.log(max(digitOne, digitTwo, digitThree));
 Необходимо сделать так, чтобы функция вернула число, например выражение console.log(sum(2, 6)); должно вывести число 8 в консоль (sum - функция сложения в данном примере, ваши названия функций могут отличаться). Округлять значения, которые возвращают функции не нужно, однако, обратите внимание на разность, функция должна вычесть из большего числа меньшее, либо вернуть 0, если числа равны. Функциям всегда передаются корректные числа, проверки на NaN, Infinity делать не нужно.
 */
 
-
 const sum = (digitOne, digitTwo) => digitOne + digitTwo;
 const multiply = (digitOne, digitTwo) => digitOne * digitTwo;
 const division = (digitOne, digitTwo) => digitOne / digitTwo;
-const difference = (a, b) => Math.abs(digitOne - digitTwo);
+const difference = (digitOne, digitTwo) => Math.abs(digitOne - digitTwo);
 
 let userNumberOne = +prompt("Введите первое число:");
 let userNumberTwo = +prompt("Введите второе число:");
 console.log(`Cумма введенных чисел: ${sum(userNumberOne, userNumberTwo)}`);
-console.log(`Произведение введенных чисел: ${multiply(userNumberOne, userNumberTwo)}`);
-console.log(`Частное введенных чисел: ${division(userNumberOne, userNumberTwo)}`);
-console.log(`Разница введенных чисел: ${difference(userNumberOne, userNumberTwo)}`);
+console.log(
+  `Произведение введенных чисел: ${multiply(userNumberOne, userNumberTwo)}`
+);
+console.log(
+  `Частное введенных чисел: ${division(userNumberOne, userNumberTwo)}`
+);
+console.log(
+  `Разница введенных чисел: ${difference(userNumberOne, userNumberTwo)}`
+);
