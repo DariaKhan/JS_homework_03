@@ -74,15 +74,8 @@ console.log(max(digitOne, digitTwo, digitThree));
 const sum = (digitOne, digitTwo) => digitOne + digitTwo;
 const multiply = (digitOne, digitTwo) => digitOne * digitTwo;
 const division = (digitOne, digitTwo) => digitOne / digitTwo;
-function difference(digitOne, digitTwo) {
-if (digitOne > digitTwo) {
-  return digitOne - digitTwo;
-} else if (digitOne < digitTwo) {
-  return digitTwo - digitOne;
-} else {
-  returnuserNumber
-}
-}
+const difference = (a, b) => Math.abs(digitOne - digitTwo);
+
 let userNumberOne = +prompt("Введите первое число:");
 let userNumberTwo = +prompt("Введите второе число:");
 console.log(`Cумма введенных чисел: ${sum(userNumberOne, userNumberTwo)}`);
